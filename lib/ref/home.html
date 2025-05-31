@@ -1,0 +1,1959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DIS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 550px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
+    /* On small screens, set height to 'auto' for the grid */
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+
+    .table-responsive {
+    max-height:250px;
+}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Doc Management System</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li><a href="~/employer.html">Age</a></li>
+        <li><a href="#">Gender</a></li>
+        <li><a href="#">Geo</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-2 d-none d-sm-block bg-light sidebar">
+      <h2 class="mb-4">Doc Management System</h2>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="home.html">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="employer.html">Employer Profile List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="applicationList.html">Philippines Consulate Use</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="systemSetting.html">System Setting</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-10">
+     
+      <div class="well">
+
+
+        <nav class="navbar bg-body-tertiary">
+          <div class="container-fluid">
+            <form class="d-flex me-auto" role="search">
+              <input class="form-control me-2" type="search" placeholder="Type in Employer's HKID / Name / Phone Number to search..." style="width: 500px;" aria-label="Search">
+              <button class="btn btn-primary " style="margin-right: 5px;" type="submit">Search</button>
+              <button class="btn btn-primary " type="button" onclick="openPreviewDialog()">Create Employer Profile</button>
+            </form>
+          </div>
+        </nav>
+        <!--</form>-->
+      </div>
+      <div class="row">
+      <div class="well">
+        <div class="col">
+<div class="row"><div class="col-3">System News:</div> <div class="col-2"><button type="button" class="btn btn-light">More</button></div></div>
+<p>> Helper minimum salary increase to $5000. Effective Date: 01/01/2024</p>
+<p>> Additional Statutory Holiday: Easter. Effective Date: 01/03/2024</p>
+      </div>
+    </div>
+  </div>
+      <div class="row">
+        <div class="col-sm-8">
+      <div class="well" style="height:310px">
+        <div class="col-sm-8">
+<div><p></p></div>
+
+
+
+<p>Remind: Mary(A12333)'s Visa will expiry in 90 days</p>
+
+<table  class="table table-bordered">
+  <tr><td colspan="7">7/11/2023 - Notes</td></tr>
+<tr>
+  <td>Worker Type</td>
+  <td>Worker Code</td>
+  <td>Employer Name</td>
+  <td>Employer Mobile</td>
+  <td>Helper Name</td>
+  <td>Notes Detail</td>
+  <td></td>
+</tr>
+<tr>
+  <td>OVERSEA</td>
+  <td>W1234</td>
+  <td>Chan Tai Man</td>
+  <td>41341344</td>
+  <td>Mary</td>
+  <td>chan tai man want to terminate helper</td>
+  <td><button type="button" class="btn btn-light"><i class="bi bi-search"></i></button></td>
+</tr>
+
+</table>
+
+         <!-- <table>
+            <tr>
+              <td>7/11/2023</td>
+            </tr>
+            <tr>
+              <Td>
+                <h5>Notes</h2>
+
+            <ul>
+              <li>Chan Tai Man postpone helper arrive</li>
+              <li> Wong Tai want to terminate helper</li>
+            </ul>  
+            <h5>Remind</h2>
+
+              <ul>
+               <p><button>ALL</button><button>Passport</button><button>Visa</button></p>
+                <table class="table table-bordered">
+                  <tr><td>Subject</td>
+                    <td>Helper Name</td>
+                    <td>Expiry Day(s) In</td>
+                  </tr>
+                <tr>
+                  <td>Passport</td>
+                  <td>Mary</td>
+                  <td>90</td>
+                  <td><button>Detail</button></td>
+                </tr>
+                <tr>
+                  <td>Visa</td>
+                  <td>Mary</td>
+                  <td>59</td>
+                  <td><button>Detail</button></td>
+                </tr>
+                </table>
+              </ul>  
+              </Td>
+            </tr>
+          </table>-->
+           <!--<div class="calendar">
+              <div class="day">Monday
+                  <p>Remarks: Chan Tai Man postpone helper arrive</p>
+                  <p>Remind: Mary(Oversea) visa expire in 90 days</p>
+              </div>
+              <div class="day">Tuesday
+                  <p>Remarks: Wong Tai want to terminate helper</p>
+                  <p></p>
+              </div>
+              <div class="day">Wednesday
+                  <p></p>
+                  <p>Remind: May(Renew) Passport expire in 150 days</p>
+              </div>
+              <div class="day">Thursday
+                  <p></p>
+                  <p></p>
+              </div>
+              <div class="day">Friday
+                  <p></p>
+                  <p>Remind: May(Oversea) visa expire in 80 days</p>
+              </div>
+              <div class="day">Saturday</div>
+              <div class="day">Sunday
+                <p></p>
+                <p>Remind: Amy(Oversea) visa expire in 95 days</p>
+
+              </div>
+          </div>--> 
+        </div>
+          <div class="col-sm-3">
+            <img src="calendar.png" alt="Girl in a jacket" width="210" height="230"> 
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="well">
+          <img src="weather.png" alt="Girl in a jacket" width="330" height="270"> 
+
+        </div>
+      </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+
+
+          <div class="well">
+            <h5>Quick Access</h5>
+            <div class="tab">
+              <button class="tablinks" onclick="openCity(event, 'Osaka')"> Print (5)</button>
+                <button class="tablinks" onclick="openCity(event, 'Paris')">Missing Document (5)</button>
+                <button class="tablinks" onclick="openCity(event, 'London')">Visa Update (9)</button>
+                <button class="tablinks" onclick="openCity(event, 'Tokyo')">Upload New Passport (2)</button>
+                <button class="tablinks" onclick="openCity(event, 'Taipei')">Upload Extend Visa After Renew Passport (3)</button>
+                <!-- <button class="tablinks" onclick="openCity(event, 'Tokyo')">Reminder (2)</button>-->
+              </div>
+
+              
+              <div id="Osaka" class="tabcontent">
+<div class="row">  <div class="col-1"><h5>Document Set:</h5></div>
+<div class="col-2"> <select  class="form-select" id="language" name="language">
+
+  <option value="na" selected>Immigration Set</option>
+  <!-- Add more language options as needed -->
+</select></div>
+</div>
+               
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                  <h4 style="margin-right: auto;"></h4>
+    
+                </div>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                        <th>Worker Type</th>
+                       
+                        <th>Employer's Name</th>
+                        <th>Employer's Phone</th>
+                        <th>Helper's Name</th>
+                        <th>Helper's Code</th>
+                        <th>Deposit Paid Date</th>
+                        <th>Status of Print Set </th>
+                        <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>OVERSEA</td>
+                      <td >John Doe</td>
+                      <td>123-456-7890</td>
+                      <td>May</td>
+                      <td>C123</td>
+                      <td>13/3/2024</td>
+                      <td >
+                        <!--<i class="bi bi-exclamation-circle me-2" style ="color: red; font-size: 2em;" data-toggle="tooltip" data-placement="top" title="Please complete the mandate information first. You may check on 'Missing Document' for more detail." ></i><span>Mandatory Information Missing</span>-->
+                        <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 33.3%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top" title="Mandatory Information Missing"></div>
+                      </div>
+                    </td>
+                      <td>
+                        <button type="button" class="btn btn-light me-2" disabled ><i class="bi bi-printer-fill" data-toggle="tooltip" data-placement="top" title="Please complete the mandate information first. You may check on 'Missing Document' for more detail."></i></button>
+                        <button type="button" class="btn btn-light"><i class="bi bi-search"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>OVERSEA</td>
+                        <td>CHAN WAI</td>
+                        <td>98765432</td>
+                        <td>Susan</td>
+                        <td>C123</td>
+                        <td>13/6/2024</td>
+                        <td ><!-- <i class="bi bi-check2-circle green-icon me-2" style ="color: green; font-size: 2em;"></i><span class="  me-2">All Collected</span>-->
+                          <div class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top" title="All Collected"></div>
+                          </div>
+
+                      </td>
+                        <td>
+                          <button type="button" class="btn btn-light me-2"><i class="bi bi-printer-fill"></i></button>
+                          <button type="button" class="btn btn-light"><i class="bi bi-search"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td>OVERSEA-EXHK</td>
+                      <td>WONG WAI</td>
+                      <td>98765432</td>
+                      <td>Amy</td>
+                      <td>C123</td>
+                      <td>13/2/2024</td>
+                      <td>
+                        <!--<i class="bi bi-exclamation-circle me-2" style ="color: rgba(250, 250, 59, 0.969); font-size: 2em;"> </i><span>Proof Document(s) Missing</span>-->
+                        <div class="progress">
+                          <div class="progress-bar bg-warning" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" data-toggle="tooltip" data-placement="top" title="Proof Document(s) Missing"></div>
+                        </div>
+                    </td>
+                      <td>
+                        <button type="button" class="btn btn-light me-2"><i class="bi bi-printer-fill"></i></button>
+                        <button type="button" class="btn btn-light"><i class="bi bi-search"></i></button></td>
+                    </tr>
+                    <!--<tr>
+                        <td>RENEW</td>
+                      <td>CHOW WAI</td>
+                      <td>98765432</td>
+                      <td>Zoe</td>
+                      <td>13/5/2024</td>
+                      <td>Completed</td>
+                      <td>0</td>
+                      <td><button>Detail</button></td>
+                    </tr>-->
+    
+                  </tbody>
+                </table>
+    
+            </div>
+    
+
+              <!-- Tab content -->
+            <div id="Paris" class="tabcontent">
+             
+
+             
+
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <h4 style="margin-right: auto;"></h4>
+
+            </div>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                    <th>Worker Type</th>
+                   
+                    <th>Employer's Name</th>
+                    <th>Employer's Phone</th>
+                    <th>Helper's Name</th>
+                    <th>Deposit Paid Date</th>
+                    <th colspan="2">Number of Missing Doc/info</th>
+                    <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td>OVERSEA</td>
+                  <td >John Doe</td>
+                  <td>123-456-7890</td>
+                  <td>May</td>
+                  <td>13/3/2024</td>
+                  <td colspan="2">
+                    <div style="display: flex;">
+                        <div style="width: 80%;">
+                            3
+                            <div class="info-box">
+                                <p>Missing item(s):</p>
+                                <ul>
+                                    <li>Address Proof</li>
+                                    <li>Family HKID copy</li>
+                                    <li>Employer HKID</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="width: 20%;">
+                            <button type="button" class="btn btn-success me-2"><i class="bi bi-whatsapp"></i></button>
+                        </div>
+                    </div>
+                </td>
+                  <td><button type="button" class="btn btn-light"><i class="bi bi-search"></i></button></td>
+                </tr>
+                <tr>
+                    <td>OVERSEA</td>
+                    <td>CHAN WAI</td>
+                    <td>98765432</td>
+                    <td>Susan</td>
+                    <td>13/6/2024</td>
+                    <td colspan="2">
+                      <div style="display: flex;">
+                          <div style="width: 80%;">
+                              2
+                              <div class="info-box">
+                                  <p>Missing item(s):</p>
+                                  <ul>
+                                      <li>Address Proof</li>
+                                      <li>Family HKID copy</li>
+                                      <li>Employer HKID</li>
+                                  </ul>
+                              </div>
+                          </div>
+                          <div style="width: 20%;">
+                              <button type="button" class="btn btn-success me-2"><i class="bi bi-whatsapp"></i></button>
+                          </div>
+                      </div>
+                  </td>
+                    <td><button type="button" class="btn btn-light"><i class="bi bi-search"></i></button></td>
+                </tr>
+                <tr>
+                    <td>OVERSEA-EXHK</td>
+                  <td>WONG WAI</td>
+                  <td>98765432</td>
+                  <td>Amy</td>
+                  <td>13/2/2024</td>
+                  <td colspan="2">
+                    <div style="display: flex;">
+                        <div style="width: 80%;">
+                            0
+                        </div>
+                        <div style="width: 20%;">
+                            <button type="button" class="btn btn-success me-2" disabled><i class="bi bi-whatsapp"></i></button>
+                        </div>
+                    </div>
+                </td>
+                  <td><button type="button" class="btn btn-light"><i class="bi bi-search"></i></button></td>
+                </tr>
+                <!--<tr>
+                    <td>RENEW</td>
+                  <td>CHOW WAI</td>
+                  <td>98765432</td>
+                  <td>Zoe</td>
+                  <td>13/5/2024</td>
+                  <td>Completed</td>
+                  <td>0</td>
+                  <td><button>Detail</button></td>
+                </tr>-->
+
+                <tr>
+                    <td>FINISH CONTRACT</td>
+                    <td>KWOK HING</td>
+                    <td>23144532</td>
+                    <td>Kay</td>
+                    <td>13/5/2024</td>
+                    <td colspan="2">
+                      <div style="display: flex;">
+                          <div style="width: 80%;">
+                              0 
+                          </div>
+                          <div style="width: 20%;">
+                              <button type="button" class="btn btn-success me-2" disabled><i class="bi bi-whatsapp"></i></button>
+                          </div>
+                      </div>
+                  </td>
+                    <td><button type="button" class="btn btn-light"><i class="bi bi-search"></i></button></td>
+                </tr>
+
+              </tbody>
+            </table>
+
+        </div>
+
+
+        <div id="London" class="tabcontent">
+
+
+          <div class="card" style="width:70%">
+            <h5 class="card-header">Visa Type: E-VISA (5)</h5>
+            <div class="card-body">
+             
+              
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+
+                        <div class="col-9">
+                          <h5 class="card-title">Worker Type: Oversea</h5>
+                          <p class="card-text">Purpose: Enter to Hong Kong (4)</p>
+                        </div>
+                        <div class="col-3">
+                          <button type="button" class="btn btn-light" style="width: 100%;"><i class="bi bi-upload"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body">
+
+                      <div class="row">
+
+                        <div class="col-9">
+                          <h5 class="card-title">Worker Type: Renew / Transfer</h5>
+                          <p class="card-text">Purpose: For Exit (1)</p>
+                        </div>
+                        <div class="col-3">
+                          <button type="button" class="btn btn-light" style="width: 100%;"><i class="bi bi-upload"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+
+<br/>
+          <div class="card" style="width:70%">
+            <h5 class="card-header">Visa Type: White Slip Visa (8)</h5>
+            <div class="card-body">
+             
+              
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+
+                        <div class="col-9">
+                          <h5 class="card-title">Worker Type: Oversea</h5>
+                          <p class="card-text">Purpose: Valid for Work (4)</p>
+                        </div>
+                        <div class="col-3">
+                          <button type="button" class="btn btn-light" style="width: 100%;"><i class="bi bi-upload"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-6">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+
+                        <div class="col-9">
+                          <h5 class="card-title">Worker Type: Renew / Transfer</h5>
+                          <p class="card-text">Purpose: Valid for Work (4)</p>
+                        </div>
+                        <div class="col-3">
+                          <button type="button" class="btn btn-light" style="width: 100%;"><i class="bi bi-upload"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+            </div>
+          </div>
+
+<div class="row mb-2" style="display: none;">
+  <div class="col-1">
+<h6>Worker Type: <br/>OVERSEA</h6>
+  </div>
+  <div class="col-2"> Visa Type: <br/>E-VISA</div>
+  <div class="col-2"> Purpose: <br/>Enter to Hong Kong</div>
+
+  <div class="col-2"><button type="button"  style="width: 100%; height: 30px;">+</button></div>
+</div>
+
+<table class="table table-bordered" style="display: none;">
+  <thead>
+    <tr>
+        <th>Code</th>
+        <th>Employer's Name</th>
+        <th>Employer's Mobile Phone</th>
+        <th>Issue Date</th>
+        <th>Expiry Date</th>
+        <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+        <td>C12222</td>
+      <td >John Doe</td>
+      <td>123-456-7890</td>
+      <td>/</td>
+      <td>/</td>
+      <td><button type="button" class="btn btn-light"><i class="bi bi-file-earmark-arrow-up"></i></button>
+      <button type="button" class="btn btn-light"><i class="bi bi-search"></i></button></td>
+    </tr>
+    </tbody></table>
+<br/>
+    <div class="row mb-2"  style="display: none;">
+      <div class="col-1">
+    <h6>Worker Type: <br/>OVERSEA</h6>
+      </div>
+      <div class="col-2"> Visa Type: <br/>White Slip Visa</div>
+      <div class="col-2"> Purpose: <br/>Valid for Work</div>
+      <div class="col-2"><button type="button"  style="width: 100%; height: 30px;">+</button></div>
+    </div>
+    
+    <table class="table table-bordered" style="display: none;">
+      <thead>
+        <tr>
+            <th>Code</th>
+            <th>Employer's Name</th>
+            <th>Employer's Mobile Phone</th>
+            <th>Date of Contract Start (Enter to Hong Kong)</th>
+            <th>Exipry Date</th>
+            <th>Contract End Date</th>
+            <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td>C12222</td>
+          <td >John Doe</td>
+          <td>123-456-7890</td>
+          <td>/</td>
+          <td>/</td>
+          <td>/</td>
+          <td><button type="button" class="btn btn-light"><i class="bi bi-file-earmark-arrow-up"></i></button>
+          <button type="button" class="btn btn-light"><i class="bi bi-search"></i></button></td>
+        </tr>
+        </tbody></table>
+        <br/>
+        <div class="row mb-2"  style="display: none;">
+          <div class="col-1">
+        <h6>Worker Type: <br/>Renew</h6>
+          </div>
+          <div class="col-2"> Visa Type: <br/>E-Visa</div>
+          <div class="col-2"> Purpose: <br/>For Exit</div>
+          <div class="col-2"><button type="button"  style="width: 100%; height: 30px;">+</button></div>
+        </div>
+        
+        <table class="table table-bordered" style="display: none;">
+          <thead>
+            <tr>
+                <th>Employer's Name</th>
+                <th>Employer's Mobile Phone</th>
+                <th>Helper's Name</th>
+                <th>Submission Date to Immigration</th>
+                <th>Date of Contract Start</th>
+                <th>Exipry Date</th>
+                <th>Contract End Date</th>
+                <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td >John Doe</td>
+              <td>123-456-7890</td>
+              <td>Mary</td>
+              <td>/</td>
+              <td>/</td>
+              <td>/</td>
+              <td>/</td>
+              <td><button type="button" class="btn btn-light"><i class="bi bi-file-earmark-arrow-up"></i></button>
+              <button type="button" class="btn btn-light"><i class="bi bi-search"></i></button></td>
+            </tr>
+            </tbody></table>
+            <table class="table table-bordered" style="display: none;">
+                <thead>
+                  <tr>
+                      <th>Worker Type</th>
+                      <th>Visa Type / Purpose</th>
+                      <th>Reason </th>
+                      <th>Date of Contract Start</th>
+                      <th>Employer's Name</th>
+                      <th>Employer's Mobile</th>
+                      <th>Expire Date</th>
+                      <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>OVERSEA</td>
+                      <td>E-VISA</td>
+                      <td>Approve Visa for Enter HK</td>
+                      <td> / </td>
+                    <td>Chan Tai man</td>
+                    <td>91234567</td>
+                    <td>01/09/2024</td>
+                    <td><button>Detail</button></td>
+                  </tr>
+                  <tr>
+                    <td>OVERSEA</td>
+                    <td>White Slip Visa</td>
+                    <td> / </td>
+                    <td>20/10/2024</td>
+                  <td>Wong Tai man</td>
+                  <td>6124567</td>
+                  <td>01/09/2024</td>
+                  <td><button>Detail</button></td>
+                </tr>
+                <tr>
+                  <td>Renew</td>
+                  <td>E-visa</td>
+                  <td> / </td>
+                  <td>10/12/2024</td>
+                <td>Chow Tai man</td>
+                <td>51234567</td>
+                <td>01/09/2024</td>
+                <td><button>Detail</button></td>
+              </tr>
+
+  
+                </tbody>
+              </table>
+
+
+            </div>
+
+            <div id="Tokyo" class="tabcontent">
+
+              <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                        <th>Worker Type</th>
+                        <th>Employer's Name</th>
+                        <th>Code</th>
+                        <th>Helper's Name</th>
+                        <th>Visa Expiry Date</th>
+                        <th>Passport Expiry Date</th>
+                        <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>OVERSEA-EXHK</td>
+                      <td>WONG WAI</td>
+                      <td>C1234</td>
+                      <td>Amy</td>
+                      <td>01/10/2024</td>
+                      <td>01/11/2024</td>
+                      <td><button>Detail</button></td>
+                    </tr>
+                    <tr>
+                      <td>FINISH CONTRACT</td>
+                      <td>KWOK HING</td>
+                      <td>C4321</td>
+                      <td>Kay</td>
+                      <td>20/09/2024</td>
+                      <td>01/11/2024</td>
+                      <td><button>Detail</button></td>
+                  </tr>
+    
+                  </tbody>
+                </table>
+    
+    
+              </div>   
+              <div id="Taipei" class="tabcontent">
+
+                <table class="table table-bordered">
+                    <thead>
+                      <tr>
+                        <th>Renew</th>
+                          <th>E-visa</th>
+                          <th>Employer's Name</th>
+                          <th>Employer's Mobile</th>
+                          <th>Helper's Name</th>
+                          <th>Remaining Visa for Ends Contract</th>
+                          <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td></td>
+                        <td></td>
+                        <td>WONG WAI MAN</td>
+                        <td>91234567</td>
+                        <td>Mary</td>
+                        <td>52 days</td>
+                        <td><button>Detail</button></td>
+                      </tr>
+      
+                    </tbody>
+                  </table>
+      
+      
+                </div>   
+
+          </div>
+        </div>
+     
+
+       
+
+         
+        </div>
+      </div>
+
+      </div>
+      
+   <!--   <div class="row">
+        <div class="col-sm-3">
+          <div class="well">
+            <h5> Application In Process </h4> 
+              <p> 4</p> 
+              <h5> Created Application </h4> 
+            <p>10</p> 
+            <span style="font-size: smaller;">in July / 2024</span>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Missing Document For Further Process</h4>
+            <p>2</p> 
+          </div>
+        </div>
+
+        
+    
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="well">
+            <div class="panel-body table-responsive">
+              <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th style="width: 15%;">Contract No.</th>
+                      <th style="width: 15%;">Worker Type</th>
+                      <th style="width: 20%;">Employer Name</th>
+                      <th style="width: 20%;">Helper Name</th>
+                      <th style="width: 15%;">Create Date</th>
+                      <th style="width: 15%;">Number of Missing Document</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <td>A123456 </td>
+                        <td>OVERSEA</td>
+                          <td>CHAN TAI MAN</td>
+                          <td>Mary</td>
+                          <td style="color: red;">2024-06-20</td>
+                          <td>3</td>
+                      </tr>
+                      <tr>
+                        <td>A112233</td>
+                        <td>OVERSEA</td>
+                          <td>WONG TAI MAN</td>
+                          <td>Susan</td>
+                          <td style="color: red;">2024-06-25</td>
+                          <td>1</td>
+                      </tr>
+                      <tr>
+                        <td>A224466</td>
+                        <td>OVERSEA</td>
+                        <td>WONG TAI MAN</td>
+                        <td>May</td>
+                        <td >2024-07-01</td>
+                        <td>2</td>
+                      </tr>
+                      <tr>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                      </tr>
+                      <tr>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                      </tr>
+                      <tr>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                      </tr>
+                      <tr>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                      </tr>
+                      <tr>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                      </tr>
+                      <tr>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                          <td>-</td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+          
+            
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="well">
+          <img src="calendar.png" alt="Girl in a jacket" width="230" height="300"> 
+        </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="well">
+            <p>Text</p> 
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Text</p> 
+          </div>
+        </div>
+      </div>-->
+    </div>
+  </div>
+</div>
+
+
+<div id="previewDialog" class="modal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title createProfile" style="display: block;">Create Employer Profile</h5>
+
+        <h5 class="modal-title paymentInfo" style="display: none;">Payment Confirmation</h5>
+
+        <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="closePreview()"></button>
+      </div>
+      <div class="modal-body">
+        <div class="createProfile" style="display: block;">
+        <div class="row pt-2 mb-3">
+                  <h5 >Employer Information</h5>
+                </div>
+        <div class="row mb-2">
+              
+              <div class="col-6">
+                
+                <div class="row">
+                  <div class="form-group col-sm-6">
+                    <label class=" ">HKID</label><span style="color: red;">*</span>
+                    <input type="text" class="form-control " id="inputEmail3" value ="Z683365(5)">
+                  </div>
+                  <div class="form-group col-sm-6">
+                    <label class=" ">Chinese Name</label><span style="color: red;">*</span>
+                    <input type="text" class="form-control" id="inputPassword3" value="">
+                  </div>
+                </div>
+
+                <div class="row"> 
+                  <div class="form-group col-6">
+                      <label class=" ">English Surname</label><span style="color: red;">*</span>
+                      <input type="text" class="form-control" id="inputPassword3" value="" placeholder="Surname">
+                  </div>
+                      <div class="form-group col-6">
+
+                    <label class=" ">English Given Names</label><span style="color: red;">*</span>
+                      <input type="text" class="form-control col-sm-6" id="inputPassword3" value="Wing Ching" placeholder="Given Names">
+                    </div>
+                </div>
+
+                <div class="row">
+                  <div class="form-group col-sm-6">
+                    <label class=" ">Date of Birth</label>
+                    <input type="date" class="form-control" id="inputPassword3" value="03-06-1985">
+                  </div>
+
+                  <div class="form-group col-sm-6">
+                    <div class="row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Gender</label></div>
+                    <div class="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" >
+                        <label class="form-check-label" for="gridRadios1">
+                          Female
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                        <label class="form-check-label" for="gridRadios2">
+                          Male
+                        </label>
+                      </div>
+                      </div>
+                  </div>
+                    
+                </div>
+
+               
+              
+              </div>
+
+              <div class="col-6" >
+                <div class="row">
+                <div class="drop-container" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
+                  <button id="dragHkidBtn" style="display:block;" onclick="dragHkid()">drag</button>
+                  <p id="dragIdtext" style="display:block;">Drag and drop Employer's HKID here</p>
+
+
+                  <img id="hkidImg" src="hkid.jpg" alt="Girl in a jacket" width="100%" height="180" style="display:none;"> 
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-6">
+            <label class=" ">Mobile Phone</label><span style="color: red;">*</span>
+            <input type="phone" class="form-control" id="inputPassword3">
+        </div>
+        <div class="col-6">
+          <label class=" ">Email Address</label>
+          <input type="email" class="form-control" id="inputPassword3">
+        </div>
+        </div>
+        <div style="display: none;">
+          <div class="row mb-3">
+                <div class="col-6">
+                  <label class=" ">Nationality</label>
+                  <input type="text" class="form-control" id="inputPassword3">
+              </div>
+                <div class="col-6">
+                  <label class=" ">Occupation</label>
+                  <input type="text" class="form-control" id="inputPassword3">
+                </div>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-6">
+          <label for="language">Preferred language:</label><span style="color: red;">*  </span><span><i class="bi bi-info-circle-fill" data-toggle="tooltip" data-placement="top" title="Language for the receipt"></i></span>
+          <select  class="form-select" id="language" name="language">
+
+            <option value="na" selected>-- Please Select --</option>
+            <option value="english" >English</option>
+            <option value="chinese">Chinese</option>
+            <!-- Add more language options as needed -->
+          </select>
+        </div>
+       
+        </div>
+
+        <hr class="bg-drak border-2 border-top border-dark mb-3" />
+
+        <div class="row pt-2 mb-3">
+        <h5 >Application Information</h5>
+      </div>
+      <div class="row mb-3">
+        <div class="col-6">
+          <label for="language">Worker Nationality:</label><span style="color: red;">*  </span>
+          <select  class="form-select" id="language" name="language">
+
+            <option value="na" selected>-- Please Select --</option>
+            <option value="english" >The Philippines</option>
+            <option value="chinese">Indonesia</option>
+            <!-- Add more language options as needed -->
+          </select>
+        </div>
+      </div>
+      <div class="row mb-3">
+       <div class="col-6">
+        <label for="language">Worker Type:</label><span style="color: red;">*</span>
+        <select id="workerTypeSelect" class="form-select" name="language" onchange="hideJobOrder()">
+
+          <option value="na" selected>-- Please Select --</option>
+          <option value="oversea" >OVERSEA FIRST TIME</option>
+          <option value="exhk">OVERSEA FINISH CONTRACT</option>
+          <option value="exhk">OVERSEA TERMINATE</option>
+          <option value="finish">FINISH CONTRACT / TRANSFER</option>
+          <option value="renew">RENEW</option>
+          <!-- Add more language options as needed -->
+        </select>
+
+       </div>
+
+       <div class="col-6">
+          <label for="language">Please select the reason for Employment:</label><span style="color: red;">*</span>
+            <select id="employReasonSelect" class="form-select" name="language" onchange="hideJobOrder()">
+
+              <option value="na" selected>-- Please Select --</option>
+              <option value="first">First Time Employment</option>
+              <option value="renew">Renew</option>
+              <option value="replace">Replace</option>
+              <option value="addition">Additional</option>
+              <!-- Add more language options as needed -->
+            </select>
+          </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-6">
+         <label for="language">Any replacement Helper still working now or leaved already?</label><span style="color: red;">*</span>
+         <select id="workerTypeSelect" class="form-select" name="language" onchange="hideJobOrder()" style="display: none;">
+ 
+           <option value="na" selected>-- Please Select --</option>
+           <option value="oversea" >Yes</option>
+           <option value="exhk">No</option>
+           <!-- Add more language options as needed -->
+         </select>
+         <input type="number" id="quantity" name="quantity" min="0" max="5" value="0">
+ 
+        </div>
+ 
+        <div class="col-6">
+           <label for="language">Any additional Helper still working now or leaved already?</label><span style="color: red;">*</span>
+             <select id="employReasonSelect" class="form-select" name="language" onchange="hideJobOrder()" style="display: none;">
+ 
+               <option value="na" selected>-- Please Select --</option>
+               <option value="first">Yes</option>
+               <option value="renew">No</option>
+               <!-- Add more language options as needed -->
+             </select>
+
+             <input type="number" id="quantity" name="quantity" min="0" max="5" value="0">
+           </div>
+       </div>
+
+  <div class="row mb-3">
+       <div class="col-6">
+      <label for="language">Payment Amount:</label><span style="color: red;">*</span>
+      <div class="row mb-3">
+        <div class="col-6">
+          <select id="language" class="form-select" name="language">
+            <option value="na" selected>-- Please Select --</option>
+            <option value="english">Normal</option>
+            <option value="chinese">Discount</option>
+            <!-- Add more language options as needed -->
+          </select>
+        </div>
+          <div class="col-6">
+          <input type="text" id="dob" name="dob" value="1000" readonly required></div>
+        </div>
+      </div>
+
+    <div class="col-6">
+      <label for="language">Payment Method:</label><span style="color: red;">*</span>
+      <select id="language" class="form-select" name="language">
+        <option value="na" selected>-- Please Select --</option>
+        <option value="1">FPS</option>
+        <option value="2">Bank Transfer</option>
+        <option value="3">Cash</option>
+        <option value="4">EPS</option>
+        <option value="5">Cq.</option>
+        <option value="6">Credit Card</option>
+        <!-- Add more language options as needed -->
+      </select>
+
+    </div>
+
+
+
+      <div class="row">
+       
+          
+  <div id="accordion" >
+          <div class="card col">
+            <div class="card-header" id="headingThree">
+              <h5 class="mb-0">
+                <button onclick="openjoborder()" class="btn collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Job Order
+                </button>
+              </h5>
+            </div>
+            <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordion">
+              <div class="card-body">
+                <table id="joborder"  class="table table-bordered">
+                  <tbody>
+                    <tr><td colspan="4"><div class="drop-container" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)">
+                      <p >Drag and drop Applicant's CV here<span style="color: red;">*</span></p>
+                    </div></td></tr>
+
+                    <tr>
+                      <td>NAME OF EMPLOYER:</td>
+                      <td><input type="text" id="gender" name="gender" value="Lok, Wing Ching" readonly required></td>
+                    </tr>
+                    <tr>
+                      <td>CODE:</td>
+                      <td><input type="text" id="gender" name="gender" value="" readonly required></td>
+                      <td>EXPECTED COMMENCEMENT DATE:</td>
+                      <td><input type="date" id="start" name="trip-start" min="2024-09-14" max="2025-12-31" /><br><div>
+                        <input type="checkbox" id="horns" name="horns" />
+                        <label for="horns">ASAP</label>
+                      </div>
+                      </td>
+
+                    
+                    </tr>
+                    <tr>
+                      <td>NAME OF APPLICANT:<span style="color: red;">*</span></td>
+                      <td ><input type="text" id="gender" name="gender" value="" readonly required></td>
+                      
+                      <td>REST DAY:</td>
+                      <td ><input type="text" id="gender" name="gender" value="WEEKDAY" readonly required></td>
+                    </tr>
+                    <tr>
+                      <td>SALARY:</td>
+                      <td><input type="text" id="gender" name="gender" value="" readonly required></td>
+                      <td>ALLOWANCE:</td>
+                      <td ><input type="text" id="gender" name="gender"  readonly required></td>
+                    </tr>
+                    <tr>
+                      <td>NO. OF ADULTS:</td>
+                      <td><input type="number" id="quantity" name="quantity" min="1" max="5"></td>
+                      <td>NO. OF ELDERLY AND AGE:</td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>HEALTH CONDITION OF ELDERLY:</td>
+                      <td ></td>
+                    </tr>
+                    <tr>
+                      <td style="width: 15%;">NO. OF CHILDREN:</td>
+                      <td style="width: 25%;"><input type="number" id="childQuantity" name="childQuantity" min="0" max="5" onchange="showChildAgeFields()"></td>
+                      <td id="ageFieldsLabel" style="display: none ;width: 10%;">AGES:</td>
+                      <td id="ageFields" style="display: none;width: 40%;"></td>
+                    </tr>
+                    <tr>
+                      <td>EXPECTING BABY:</td>
+                      <td>
+                        <select id="language" name="language">
+                          <option value="na" selected>-- Please Select --</option>
+                          <option value="english">Yes</option>
+                          <option value="chinese">No</option>
+                          <!-- Add more language options as needed -->
+                        </select></td>
+                      <td>DATE OF DELIVERY:</td>
+                      <td><input type="date" id="start" name="trip-start" value="2024-07" min="2024-01-01" max="2024-12-31" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>TYPE OF RESIDENCE:</td>
+                      <td> <select id="language" name="language">
+                        <option value="na" selected>-- Please Select --</option>
+                        <option value="english">House</option>
+                        <option value="chinese">Flat</option>
+                        <!-- Add more language options as needed -->
+                      </select></td>
+                      <td>SIZE:</td>
+                      <td><input type="text" id="gender" name="gender" value="" readonly required></td>
+                    </tr>
+                    <tr>
+                      <td>NO. OF BEDROOM:</td>
+                      <td><input type="number" id="quantity" name="quantity" min="1" max="10"></td>
+                      <td colspan="2"><div class="row mb-3">
+                        <div class="col-4">
+                          <label for="language">Type of Residence:</label>
+                          <select id="language" class="form-select" name="language">
+                            <option value="na" selected>-- Please Select --</option>
+                            <option value="english">House</option>
+                            <option value="chinese">Flat</option>
+                            <!-- Add more language options as needed -->
+                          </select>
+                        </div>
+                        <div class="col-8">
+                          <div class="form-floating">
+                            <textarea class="form-control" placeholder="Leave a notes here" id="floatingTextarea2" style="height: 70px"></textarea>
+                            <label for="floatingTextarea2">Residence Address</label>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                      <div class="col-4">
+                        <label for="language">Address Proof Type</label>
+                        <select id="addressProofType" class="form-select" name="language" onchange="addressProofChange()">
+                          <option value="na" selected>-- Please Select --</option>
+                          <option value="own">Residence</option>
+                          <option value="rented">Public Housing </option>
+                          <!-- Add more language options as needed -->
+                        </select>
+                      </div>
+                      <div id="residenceTypeDiv" class="col-8" style="display: none;">
+                        <label for="language">Residence Type</label>
+                        <select id="housingType" class="form-select" name="language">
+                          <option value="na" selected>-- Please Select --</option>
+                          <option value="english">Name under employer</option>
+                          <option value="chinese">Name with under families member  </option>
+                          <option value="chi">Name not under families member   </option>
+                          <option value="eng">Name from Landlord   </option>
+                          <!-- Add more language options as needed -->
+                        </select>
+                      </div>
+                      <div id="housingTypeDiv" class="col-8" style="display: none;">
+                        <label for="language">Public Housing Type</label>
+                        <select id="housingType" class="form-select" name="language">
+                          <option value="na" selected>-- Please Select --</option>
+                          <option value="english">Rent</option>
+                          <option value="chinese">Own Property </option>
+                          <!-- Add more language options as needed -->
+                        </select>
+                      </div>
+                    </div></td>
+                    </tr>
+                    <tr>
+                      <td>HELPER SLEEPING ARRANGEMENT:</td>
+                      <td colspan="3">
+                        <div class="row">
+                          <div class="col-4">
+                        <select id="helperSleepingArr" name="language" onchange="toggleTextField()">
+                        <option value="na" selected>-- Please Select --</option>
+                        <option value="ownRoom" >Own Room</option>
+                        <option value="shareRoom">Share Room</option>
+                        <!-- Add more language options as needed -->
+                      </select>
+                    </div>
+                    <div class="col-2" id="helperSleepingArrOwnFt" style="display: none;"><input class="pl-1" type="text"  name="gender" value=""  required> FEETS</div>
+                  <div class="col-8"  id="helperSleepingArrShareDiv" style="display: none;">
+                    <select id="helperSleepingArrShareSelect" name="language" onchange="toggleTextField()" style="width:120px">
+                      <option value="na" selected>-- Please Select --</option>
+                      <option value="share" >Share</option>
+                      <option value="separate">Separate</option>
+                      <option value="other">Other</option>
+                      <!-- Add more language options as needed -->
+                    </select>
+                    <div id="shareOptionText" style="display: none;">
+                      Share a room with <input type="number" id="quantity" name="quantity" min="1" max="5"> child/children aged 
+                      <input style="width:60px" type="text" id="childAge" name="childAge" value="" readonly required>
+                  </div>
+              
+                  <div id="separateOptionText" style="display: none;">
+                      Separate partitioned area of <input style="width:60px" type="text" id="partitionArea" name="partitionArea" value="" readonly required> square feet/square meters
+                  </div>
+              
+                  <div id="otherOptionText" style="display: none;">
+                      Please describe <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                  </div>
+
+
+                </div>
+                  </td>
+                    </tr>
+                    <tr>
+                      <td >MAIN DUTIES:</td>
+                    </tr>
+                    <tr>
+                      <td>BABYSITTING:</td>
+                      <td><select id="language" name="language">
+                        <option value="english">Yes</option>
+                        <option value="chinese">No</option>
+                        <!-- Add more language options as needed -->
+                      </select></td>
+                      <td>TAKE CARE OF CHILDREN:</td>
+                      <td><select id="language" name="language">
+                        <option value="english">Yes</option>
+                        <option value="chinese">No</option>
+                        <!-- Add more language options as needed -->
+                      </select></td>
+                    </tr>
+                    <tr>
+                      <td>COOKING:</td>
+                      <td><select id="language" name="language">
+                        <option value="english">Yes</option>
+                        <option value="chinese">No</option>
+                        <!-- Add more language options as needed -->
+                      </select></td>
+                      <td>CLEANING:</td>
+                      <td><select id="language" name="language">
+                        <option value="english">Yes</option>
+                        <option value="chinese">No</option>
+                        <!-- Add more language options as needed -->
+                      </select></td>
+                    </tr>
+                    <tr>
+                      <td>WASHING:</td>
+                      <td><select id="language" name="language">
+                        <option value="english">Yes</option>
+                        <option value="chinese">No</option>
+                        <!-- Add more language options as needed -->
+                      </select></td>
+                      <td>IRONING:</td>
+                      <td><select id="language" name="language">
+                        <option value="english">Yes</option>
+                        <option value="chinese">No</option>
+                        <!-- Add more language options as needed -->
+                      </select></td>
+                    </tr>
+                    <tr>
+                      <td>LAUNDRY:</td>
+                      <td><select id="language" name="language">
+                        <option value="english">Yes</option>
+                        <option value="chinese">No</option>
+                        <!-- Add more language options as needed -->
+                      </select></td>
+                      <td>MARKETING:</td>
+                      <td><select id="language" name="language">
+                        <option value="english">Yes</option>
+                        <option value="chinese">No</option>
+                        <!-- Add more language options as needed -->
+                      </select></td>
+                    </tr>
+                    <tr>
+                      <td>GARDENING:</td>
+                      <td><select id="language" name="language">
+                        <option value="english">Yes</option>
+                        <option value="chinese">No</option>
+                        <!-- Add more language options as needed -->
+                      </select></td>
+                      <td>OTHERS:</td>
+                      <td><input type="text" id="gender" name="gender" value="" readonly required></td>
+                    </tr>
+                    <tr>
+                      <td>REMARKS:</td>
+                      <td colspan="3"><div class="form-group">
+                        Show on blue contract page 4
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      </div></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+      </div>
+
+    </div>
+      
+ </div>
+       
+     
+</div>
+
+<div class="paymentInfo" style="display: none;">
+
+  <div class="row pt-2 mb-3">
+    <div class="col-2">
+    <h5>Receipt</h5>
+    </div>
+    <div class="col d-flex justify-content-end">
+        <button type="button" class="btn btn-success me-2"><i class="bi bi-whatsapp me-2"></i> Share via WhatsApp</button>
+        <button type="button" class="btn btn-success me-2"><i class="bi bi-envelope-at-fill me-2"></i>Share via Email</button>
+        <button type="button" class="btn btn-success"><i class="bi bi-file-earmark-arrow-down me-2"></i>Download</button>
+    </div>
+  </div>
+
+      <div class="row">
+          <div class="col">
+                <table  class="table table-bordered">
+                  <tr>
+                    <td>Payment Date: 01/01/2024</td>
+                    <td>Payment Method: FPS</td>
+                    <td>Payment Amount: HK$10000</td>
+                  </tr>
+                  <tr>
+                    <td>Employer Name: Lok, Wing Ching</td>
+                    <td>Employer HKID: A123456</td>
+
+                  </tr>
+                  <tr>
+                    <td>Code: h123</td>
+                    <td>Applicant Name: Mary</td>
+                    <td>Nationality: Philippines</td>
+                  </tr>
+                  <tr>
+                      <td colspan="3" class=" p-2"><button type="button" class="btn btn-success me-2"><i class="bi bi-printer-fill  me-2"></i>Print</button></td>
+                      
+                  </tr>
+                </table>
+            </div>
+        </div>
+        <br/><br/>
+        <div class="row pt-2 mb-3">
+          <div class="col-5">
+          <h5>Job Order </h5><span style="color: red;"> information missing.</span>
+          </div>
+          <div class="col d-flex justify-content-end">
+              <button type="button" class="btn btn-success me-2"><i class="bi bi-whatsapp me-2"></i> Share via WhatsApp</button>
+
+              <button type="button" class="btn btn-success me-2"><i class="bi bi-envelope-at-fill me-2"></i>Share via Email</button>
+
+              <button type="button" class="btn btn-success me-2"><i class="bi bi-file-earmark-arrow-down me-2"></i>Download</button>
+
+              <button type="button" class="btn btn-success me-2"><i class="bi bi-printer-fill  me-2"></i>Print</button>
+          </div>
+        </div>
+      
+            <div class="row">
+              </div>
+  </div>
+
+
+
+<hr class="bg-drak border-2 border-top border-dark mb-3" />
+      <div class=" d-flex justify-content-between" style="width:100%">
+        <button type="button" class="btn btn-secondary" onclick="closePreview()">Close</button>
+        <div>
+            <button type="button" class="btn btn-primary" id="showAlertBtn">Save</button>
+            <button type="button" class="btn btn-primary" id="goToProfile" style="display:none">Go To Profile</button>
+        </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+      
+      
+    
+
+        <div style="display: flex; align-items: center; justify-content: space-between;">
+          <button onclick="closePreview()">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container mt-4">
+  <div class="alert alert-success mt-3 alert-top-right" role="alert" id="alertMessage" style="display: none;">
+      Employer Lok, Wing Ching's Profile is created sucessful!
+  </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+<script>
+  toggleTextField();
+
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+  function hideJobOrder(){
+
+  var workerTypeSelect = document.getElementById("workerTypeSelect");
+  var employReasonSelect = document.getElementById("employReasonSelect");
+  var accordion = document.getElementById("accordion");
+  
+
+if(workerTypeSelect.value==="renew"){
+  accordion.style.display='block';
+employReasonSelect.value='renew';
+}else if(workerTypeSelect.value==="finish"){
+  accordion.style.display='block';
+}
+
+else if (workerTypeSelect.value==="oversea"){
+  accordion.style.display='block';
+}
+else if(workerTypeSelect.finish==="exhk"){
+  accordion.style.display='block';
+}
+
+if(employReasonSelect.value==="renew"){
+  accordion.style.display='block';
+  //workerTypeSelect.value='renew';
+
+}else if (employReasonSelect.value==="replace"||employReasonSelect.finish==="addition"||employReasonSelect.finish==="first"){
+  accordion.style.display='block';
+}
+
+
+  }
+
+  function dragHkid(){
+
+    dragIdtext.style.display = 'none';
+    hkidImg.style.display = 'block';
+    dragHkidBtn.style.display = 'none';
+
+  }
+
+  document.getElementById('goToProfile').addEventListener('click', function() {
+
+    window.location.href = "viewEmployer.html";
+});
+
+  document.getElementById('showAlertBtn').addEventListener('click', function() {
+    const alertMessage = document.getElementById('alertMessage');
+     
+    alertMessage.style.display = 'block';
+    const showAlertBtn = document.getElementById('showAlertBtn');
+    const goToProfileBtn = document.getElementById('goToProfile');
+    showAlertBtn.style.display = 'none';
+    goToProfileBtn.style.display = 'block';
+
+    viewPaymentInfo();
+    //const collapseThree = document.getElementById('collapseThree');
+    //collapseThree.classList.remove("show");
+    //collapseThree.classList.add("in");
+
+setTimeout(function() {
+    alertMessage.style.display = 'none';
+}, 10000); // Hides the alert after 20 seconds (20000 milliseconds)
+});
+
+
+function viewPaymentInfo(){
+  const paymentInfoElements = document.getElementsByClassName('paymentInfo');
+        for (let i = 0; i < paymentInfoElements.length; i++) {
+            paymentInfoElements[i].style.display = 'block';
+        }
+
+        const createProfileElements = document.getElementsByClassName('createProfile');
+        for (let i = 0; i < createProfileElements.length; i++) {
+            createProfileElements[i].style.display = 'none';
+        }
+}
+
+  function redirectToCreate() {
+    window.location.href = "addEmployer";
+  }
+
+  function openPreviewDialog() {
+      document.getElementById("previewDialog").style.display = "block";
+    }
+
+    function closePreview() {
+      document.getElementById("previewDialog").style.display = "none";
+    }
+
+    function openjoborder() {
+    var table = document.getElementById("joborder");
+    if (table.style.display === "none" || table.style.display === "") {
+        table.style.display = "table";
+    } else {
+        table.style.display = "none";
+    }
+}
+
+
+    function toggleTable() {
+          //  var table = document.getElementById("joborder");
+          //  var toggleSwitch = document.getElementById("toggleSwitch");
+            
+           // if (toggleSwitch.checked) {
+           //     table.style.display = "table";
+           // } else {
+                table.style.display = "none";
+         //   }
+        }
+
+        openCity(event, 'Osaka');
+        function openCity(event, cityName) {
+      var i, tabcontent, tablinks;
+      
+      // Hide all tab content
+      tabcontent = document.getElementsByClassName('tabcontent');
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = 'none';
+      }
+      
+      // Remove 'active' class from all tab links
+      tablinks = document.getElementsByClassName('tablinks');
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove('active');
+      }
+      
+      // Show the selected tab content and set the button as active
+      document.getElementById(cityName).style.display = 'block';
+      event.currentTarget.classList.add('active');
+    }
+function resetTextField(){
+
+  var selectElement = document.getElementById("helperSleepingArr");
+  var shareSelectElement = document.getElementById("helperSleepingArrShareSelect");
+  selectElement.value="na";
+  shareSelectElement.value="na";
+}
+
+    function toggleTextField() {
+  var selectElement = document.getElementById("helperSleepingArr");
+  var shareSelectElement = document.getElementById("helperSleepingArrShareSelect");
+
+  var textField = document.getElementById("helperSleepingArrOwnFt");
+  var shareTextField = document.getElementById("helperSleepingArrShareDiv");
+  var shareOptionText = document.getElementById("shareOptionText");
+  var separateOptionText = document.getElementById("separateOptionText");
+  var otherOptionText = document.getElementById("otherOptionText");
+  
+
+  
+  if (selectElement.value === "shareRoom") {
+    textField.style.display = "none";
+    shareTextField.style.display = "block";
+    
+    shareOptionText.style.display = "none";
+    separateOptionText.style.display = "none";
+    otherOptionText.style.display = "none";
+
+
+    if (shareSelectElement.value === "share") {
+        shareOptionText.style.display = "block";
+    } else if (shareSelectElement.value === "separate") {
+        separateOptionText.style.display = "block";
+    } else if (shareSelectElement.value === "other") {
+        otherOptionText.style.display = "block";
+    }
+
+  } else if (selectElement.value === "ownRoom"){
+    textField.style.display = "block";
+    shareTextField.style.display = "none";
+
+  } else if(selectElement.value === "ownRoom"){
+
+    textField.style.display = "none";
+    shareTextField.style.display = "none";
+  }
+
+}
+
+
+
+function showChildAgeFields() {
+    const childQuantity = document.getElementById('childQuantity').value;
+    const ageFieldsLabel = document.getElementById('ageFieldsLabel');
+    const ageFields = document.getElementById('ageFields');
+
+    // Clear previous input fields
+    ageFields.innerHTML = '';
+
+    if (childQuantity > 0) {
+        ageFieldsLabel.style.display = 'table-cell';
+        ageFields.style.display = 'table-cell';
+
+        for (let i = 1; i <= childQuantity; i++) {
+            const inputField = document.createElement('input');
+            inputField.type = 'number';
+            inputField.name = 'childAge' + i;
+            inputField.placeholder = 'Child ' + i + ' Age';
+            inputField.min = 1;
+            inputField.max = 18;
+
+            ageFields.appendChild(inputField);
+        }
+    } else {
+        ageFieldsLabel.style.display = 'none';
+        ageFields.style.display = 'none';
+    }
+}
+
+
+function addressProofChange(){
+  var addressProofType = document.getElementById('addressProofType');
+  var housingTypeDiv = document.getElementById('housingTypeDiv');
+  var residenceTypeDiv = document.getElementById('residenceTypeDiv');
+  if(addressProofType.value ==="own"){
+    housingTypeDiv.style.display ='none';
+    residenceTypeDiv.style.display='block';
+  }else if(addressProofType.value ==="rented"){
+
+    housingTypeDiv.style.display ='block';
+    residenceTypeDiv.style.display='none';
+  }
+  
+}
+</script>
+<style>
+.alert-top-right {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 9999; /* Ensure the alert appears on top of other content */
+    }
+
+
+  /* CSS styles for the dialog */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 800px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .preview-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .image-container {
+    margin-bottom: 10px;
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .text-container input {
+    margin-bottom: 10px;
+  }
+  
+  .text-container div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .text-container label {
+    margin-bottom: 5px;
+  }
+  
+  .text-container button {
+    margin-top: 10px;
+  }
+
+  .drop-container {
+      border: 2px dashed #ccc;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .dragover {
+      border-color: #aaa;
+    }
+
+
+
+
+    /* Style for the toggle switch */
+    .toggle {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 60px;
+        height: 34px;
+    }
+    .toggle input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 34px;
+    }
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+    }
+    input:checked + .slider {
+        background-color: #2196F3;
+    }
+    input:checked + .slider:before {
+        transform: translateX(26px);
+    }
+
+
+    .tab {
+      overflow: hidden;
+    }
+    
+    .tab button {
+      background-color: #f2f2f2;
+      border: none;
+      color: black;
+      padding: 10px 20px;
+      cursor: pointer;
+      float: left;
+      transition: background-color 0.3s;
+    }
+    
+    .tab button:hover {
+      background-color: #ddd;
+    }
+    
+    .tab button.active {
+      background-color: #ccc;
+    }
+    
+    .tabcontent {
+      display: none;
+      padding: 20px;
+    }
+
+    .accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+
+.info-box {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 1;
+    }
+    td:hover .info-box {
+        display: block;
+    }
+
+
+    .calendar {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        border: 1px solid #ccc;
+    }
+    .day {
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+
+
+</style>
+
+<!--https://www.freepik.com/icon/file_1150592#fromView=keyword&page=1&position=1&uuid=24f2ccb3-5c51-4745-a7fd-c3068da0f205-->
